@@ -1,1 +1,1 @@
-# EKPSYK---Automaten-und-M-nner
+# EKPSYK---Automaten-und-Männer
