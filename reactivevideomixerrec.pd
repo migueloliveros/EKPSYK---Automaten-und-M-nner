@@ -92,7 +92,7 @@
 #X floatatom 134 420 5 0 0 0 - - -;
 #X floatatom 180 420 5 0 0 0 - - -;
 #X floatatom 252 275 5 0 0 0 - - -;
-#X obj 177 191 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 177 191 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -234 44 fiddle~;
 #X obj -234 91 moses 60;
@@ -106,32 +106,32 @@
 #X obj 271 7 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1;
 #X obj 243 313 metro 320;
 #X obj 247 407 hsl 128 15 0 1 0 1 empty empty empty -2 -6 0 8 -262144
--1 -1 11500 1;
+-1 -1 7300 1;
 #X floatatom 244 432 5 0 0 0 - - -;
 #X msg 301 431 0.7 0.7;
 #X floatatom 243 384 5 0 0 0 - - -;
 #X obj -186 461 pix_mix 0;
 #X obj 243 340 random 127;
 #X obj 243 361 / 127;
-#X obj 471 204 cnv 15 167 200 empty empty empty 20 12 0 14 -24198 -66577
+#X obj 364 176 cnv 15 167 200 empty empty empty 20 12 0 14 -24198 -66577
 0;
-#X obj 471 384 pix_record;
-#X obj 490 353 cnv 15 145 25 empty empty empty 20 12 0 14 -225271 -66577
+#X obj 363 355 pix_record;
+#X obj 382 324 cnv 15 145 25 empty empty empty 20 12 0 14 -225271 -66577
 0;
-#X msg 500 357 bang;
-#X msg 572 357 auto \$1;
-#X obj 553 358 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+#X msg 392 328 bang;
+#X msg 464 328 auto \$1;
+#X obj 445 329 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 490 209 cnv 15 145 65 empty empty empty 20 12 0 14 -225271 -66577
+#X obj 382 180 cnv 15 145 65 empty empty empty 20 12 0 14 -225271 -66577
 0;
-#X msg 496 234 codeclist;
-#X msg 492 213 dialog;
-#X obj 492 254 t a;
-#X obj 480 281 cnv 15 155 65 empty empty empty 20 12 0 14 -225271 -66577
+#X msg 388 205 codeclist;
+#X msg 384 184 dialog;
+#X obj 384 225 t a;
+#X obj 372 252 cnv 15 155 65 empty empty empty 20 12 0 14 -225271 -66577
 0;
-#X msg 483 302 file C:/Users/Miguel/Desktop/Doctorado 2011-16/EKPSYK/a.mov
+#X msg 375 273 file C:/Users/Miguel/Desktop/Doctorado 2011-16/EKPSYK/a.mov
 ;
-#X obj 484 283 bng 15 250 50 0 empty empty empty 0 -6 0 8 -258699 -1
+#X obj 376 254 bng 15 250 50 0 empty empty empty 0 -6 0 8 -258699 -1
 -1;
 #N canvas 0 0 450 300 savepanel 0;
 #X obj 114 62 inlet;
@@ -144,39 +144,27 @@
 #X connect 2 1 1 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 0;
-#X restore 504 282 pd savepanel;
-#X msg 540 325 record \$1;
-#X obj 520 327 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+#X restore 396 253 pd savepanel;
+#X msg 432 296 record \$1;
+#X obj 412 298 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 483 325 t a;
-#X floatatom 559 387 5 0 0 0 - - -;
-#X msg 552 254 codec mjpa;
-#X msg 572 235 codec 3;
+#X obj 375 296 t a;
+#X floatatom 451 358 5 0 0 0 - - -;
+#X msg 444 225 codec mjpa;
+#X msg 464 206 codec 3;
 #X obj -76 214 random 5694;
 #X obj 177 247 random 5694;
 #X obj -186 520 rectangle 6 4;
-#X obj 560 -11 readsf~ 1;
-#X obj 561 42 dac~ 1 2;
-#X msg 518 -33 stop;
-#X msg 375 476 stop;
-#X msg 560 -35 open EkpsykCaraA24_96.wav \, 1;
 #X obj -115 15 *~ 50;
-#X obj 438 502 writesf~ 2;
-#X obj 667 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 495 469 open CaraA.wav \, 1;
-#X msg 618 470 start;
 #X obj 350 65 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #X text 321 20 START sincronizador video;
-#X text 400 78 STOP sincronizador video;
+#X text 391 74 STOP sincronizador video;
 #X connect 1 0 5 0;
 #X connect 2 0 20 0;
 #X connect 2 0 35 0;
 #X connect 2 0 44 0;
-#X connect 4 0 80 0;
-#X connect 4 0 81 0;
-#X connect 4 1 81 1;
+#X connect 4 0 75 0;
 #X connect 5 0 0 0;
 #X connect 7 0 49 0;
 #X connect 7 1 16 0;
@@ -219,7 +207,6 @@
 #X connect 43 0 29 0;
 #X connect 43 0 57 0;
 #X connect 43 0 67 0;
-#X connect 43 0 84 0;
 #X connect 44 0 50 0;
 #X connect 45 0 46 0;
 #X connect 46 0 49 2;
@@ -248,21 +235,11 @@
 #X connect 73 0 22 1;
 #X connect 73 0 34 0;
 #X connect 74 0 53 0;
-#X connect 75 0 76 0;
-#X connect 75 0 76 1;
-#X connect 75 1 76 1;
-#X connect 77 0 75 0;
-#X connect 78 0 81 0;
-#X connect 79 0 75 0;
-#X connect 79 0 82 0;
-#X connect 80 0 0 0;
-#X connect 80 0 2 0;
-#X connect 80 0 36 0;
-#X connect 83 0 81 0;
-#X connect 84 0 81 0;
-#X connect 85 0 78 0;
-#X connect 85 0 67 0;
-#X connect 85 0 57 0;
+#X connect 75 0 0 0;
+#X connect 75 0 2 0;
+#X connect 75 0 36 0;
+#X connect 76 0 67 0;
+#X connect 76 0 57 0;
 #X restore -217 -45 pd reactiveisualmixer;
 #X obj -42 -58 dsp;
 #X floatatom -42 -18 5 0 0 0 - - -;
